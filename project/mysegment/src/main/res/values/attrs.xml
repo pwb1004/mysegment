@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MySegmentView">
+        <attr name="ms_button_bg_sel" format="reference" />
+        <attr name="ms_button_bg_nor" format="reference" />
+        <attr name="ms_text_color_nor" format="color" />
+        <attr name="ms_text_color_sel" format="color"/>
+    </declare-styleable>
+</resources>
