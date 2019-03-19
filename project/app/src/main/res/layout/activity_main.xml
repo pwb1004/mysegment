@@ -10,7 +10,9 @@
         xmlns:mysegment="http://schemas.android.com/apk/res-auto"
         android:id="@+id/my_segment"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="42dp"
+        mysegment:ms_text_size_sel_sp="17"
+        mysegment:ms_text_size_nor_sp="15"
         mysegment:ms_text_color_nor="@color/colorPrimary"
         mysegment:ms_text_color_sel="@color/colorPrimaryDark"/>
 

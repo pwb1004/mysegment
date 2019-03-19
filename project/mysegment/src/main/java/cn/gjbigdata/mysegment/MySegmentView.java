@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -18,6 +19,9 @@ public class MySegmentView extends LinearLayout {
     private int textColorNormal;
 
     private int textColorSelected;
+
+    private int textSizeNormalSP;
+    private int textSizeSelectedSP;
 
     private Drawable buttonBgImageNormal;
 
@@ -91,10 +95,12 @@ public class MySegmentView extends LinearLayout {
 
             button.setBackground(buttonBgImageNormal);
             button.setTextColor(textColorNormal);
+            button.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeNormalSP);
         }
         Button button = buttons.get(index);
         button.setBackground(buttonBgImageSelected);
         button.setTextColor(textColorSelected);
+        button.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeSelectedSP);
     }
 
     public void setOnSegmentChangedListener(MySegmentListener listener) {
@@ -126,6 +132,8 @@ public class MySegmentView extends LinearLayout {
         textColorSelected = typedArray.getColor(R.styleable.MySegmentView_ms_text_color_sel, 0x000000);
         buttonBgImageNormal = typedArray.getDrawable(R.styleable.MySegmentView_ms_button_bg_nor);
         buttonBgImageSelected = typedArray.getDrawable(R.styleable.MySegmentView_ms_button_bg_sel);
+        textSizeNormalSP = typedArray.getInt(R.styleable.MySegmentView_ms_text_size_nor_sp, 15);
+        textSizeSelectedSP = typedArray.getInt(R.styleable.MySegmentView_ms_text_size_sel_sp, 15);
         typedArray.recycle();
     }
 
